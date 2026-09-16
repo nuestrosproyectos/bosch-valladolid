@@ -91,6 +91,10 @@ p{margin:0 0 1em}
 .indep small{font:600 11px/1.2 var(--fb);letter-spacing:.1em;text-transform:uppercase;color:#9DB8A3}
 .indep p{margin:0;font-size:13px;line-height:1.4;color:var(--crema)}
 .indep p strong{color:#fff}
+.hero .kicker{color:#9DB8A3;margin-bottom:10px}
+.hero-p{font-size:16px;line-height:1.45;color:#D9D2C5;margin:0 0 14px;max-width:56ch}
+.hero-p b{color:var(--crema)}
+.hero-tipo .kicker{color:var(--salvia-t)}
 .hero .chips{margin:0 0 16px}
 .hero-cta{display:grid;gap:10px}
 @media(min-width:600px){.hero-cta{grid-template-columns:auto auto;align-items:start;justify-content:start}.hero-cta .micro{grid-column:1/-1;order:0}.hero-cta .btn-wa{grid-row:1}.hero-cta .btn-amber{grid-row:1}.hero-cta .micro{grid-row:2}}

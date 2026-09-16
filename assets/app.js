@@ -140,7 +140,7 @@ var APARATOS={"lavadora":{"id":"lavadora","nombre":"Lavadora","art":"una lavador
     h += '<div class="ficha-cta"><a class="btn btn-wa" data-cta-wa href="' + wa(textoWA(c, [])) + '" target="_blank" rel="noopener">' + ico('wa') + 'WhatsApp con el código</a>';
     h += '<a class="btn btn-amber" data-cta-tel href="' + CONFIG.TEL_HREF + '">' + ico('tel') + 'Llamar · ' + CONFIG.TEL + '</a></div>';
     h += '<div class="ficha-links"><a class="link" href="' + REL + a.slug + '/">Ver todo sobre ' + esc(a.art) + ' Bosch →</a><button type="button" data-copy="' + c.id + '">Copiar enlace a este código</button></div>';
-    h += '<p class="ficha-fin">Presupuesto por escrito en casa antes de tocar nada. Si tu aparato tiene menos de 3 años, mejor el servicio oficial: <a href="https://www.bosch-home.es" rel="nofollow noopener" target="_blank">bosch-home.es</a> · 976 305 713</p>';
+    h += '<p class="ficha-fin">Presupuesto por escrito en casa antes de tocar nada. Si tu aparato tiene menos de 3 años, tiene garantía legal del fabricante: <a href="https://www.bosch-home.es" rel="nofollow noopener" target="_blank">bosch-home.es</a> · 976 305 713</p>';
     return h + '</article>';
   }
   function bindFicha(el) {
