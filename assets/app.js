@@ -133,7 +133,7 @@ var APARATOS={"lavadora":{"id":"lavadora","nombre":"Lavadora","art":"una lavador
     opts = opts || {};
     var a = APARATOS[c.ap], codigo = c.cod.split('/')[0].trim();
     var h = '<article class="ficha' + (c.sem === 'ambar' ? ' hot' : '') + '" data-id="' + c.id + '">';
-    h += '<div class="ficha-h"><span class="ficha-cod">' + esc(c.cod) + '</span><span class="ficha-ap">' + ico(a.id) + esc(a.nombre) + ' Bosch</span></div>';
+    h += '<div class="ficha-h"><span class="ficha-cod">' + esc(c.cod) + '</span><span class="ficha-ap">' + ico(a.id) + esc(a.nombre) + ' <span class="marca">Bosch</span></span></div>';
     h += '<p class="ficha-t">' + esc(c.titulo) + '</p><p class="ficha-s">' + esc(c.sig) + '</p>';
     h += '<span class="sem sem-' + c.sem + '">' + semTxt(c) + '</span>';
     if (c.pasos.length) {
@@ -210,7 +210,7 @@ var APARATOS={"lavadora":{"id":"lavadora","nombre":"Lavadora","art":"una lavador
       var a = apq ? APARATOS[apq] : null, art = a ? a.art : 'mi aparato';
       var quiza = (pre && pre.length) ? '<p>¿Querías decir…?</p><ul class="chips" style="margin-bottom:14px">' + pre.slice(0, 5).map(function (c) { return '<li><button type="button" class="chip chip-btn" data-id="' + c.id + '">' + ico(c.ap) + c.cod.split('/')[0] + ' · ' + esc(APARATOS[c.ap].nombre) + '</button></li>'; }).join('') + '</ul>' : '';
       var t = 'Hola, ' + (a ? 'tengo ' + art + ' Bosch que marca ' : 'mi aparato Bosch marca ') + key + '. ¿Me decís qué puede ser? Estoy en ' + zonaTxt();
-      res.innerHTML = '<div class="bus-no"><p>No tenemos <strong class="mono">' + esc(key) + '</strong> verificado con documentación de Bosch y preferimos no inventarlo. Escríbenoslo igual y te decimos qué puede ser.</p>' + quiza +
+      res.innerHTML = '<div class="bus-no"><p>No tenemos <strong class="mono">' + esc(key) + '</strong> verificado con documentación de <span class="marca">Bosch</span> y preferimos no inventarlo. Escríbenoslo igual y te decimos qué puede ser.</p>' + quiza +
         '<a class="btn btn-wa" href="' + wa(t) + '" target="_blank" rel="noopener">' + ico('wa') + 'Preguntar por WhatsApp</a>' +
         '<p class="ficha-fin">Manda también una foto de la etiqueta E-Nr (en la puerta o el marco del aparato): así te contestamos con el modelo exacto. <a class="link" href="' + REL + 'codigos-error/#enr">Dónde está el E-Nr →</a></p></div>';
       $$('button[data-id]', res).forEach(function (b) { b.addEventListener('click', function () { var c = CODIGOS.filter(function (y) { return y.id === b.getAttribute('data-id'); })[0]; input.value = c.cod.split('/')[0]; muestra(c); }); });
@@ -218,7 +218,7 @@ var APARATOS={"lavadora":{"id":"lavadora","nombre":"Lavadora","art":"una lavador
     function placa() {
       limpia();
       var ss = ['no detecta la olla', 'parpadea', 'se apaga por temperatura'];
-      res.innerHTML = '<div class="bus-no"><p>Las placas Bosch avisan por símbolos y parpadeos, no por códigos verificables: dinos el síntoma.</p><ul class="chips">' +
+      res.innerHTML = '<div class="bus-no"><p>Las placas <span class="marca">Bosch</span> avisan por símbolos y parpadeos, no por códigos verificables: dinos el síntoma.</p><ul class="chips">' +
         ss.map(function (s) { return '<li><a class="chip chip-btn" target="_blank" rel="noopener" href="' + wa('Hola, tengo una placa Bosch que ' + s + '. Estoy en ' + zonaTxt()) + '">' + ico('wa') + esc(s) + '</a></li>'; }).join('') +
         '</ul><p class="ficha-fin mt16"><a class="link" href="' + REL + 'placa/">Placa de inducción: por síntomas, no por códigos →</a></p></div>';
     }
