@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var CONFIG = {
-    TEL: '883 861 141', TEL_HREF: 'tel:+34883861141',
+    TEL: '641 153 922', TEL_HREF: 'tel:+34641153922',
     WA: '641 153 922', WA_BASE: 'https://wa.me/34641153922?text=',
     FORM_ENDPOINT: '' /* vacío = envío por WhatsApp (canal citado en Privacidad); si se activa un proveedor, actualizar Privacidad */
   };
@@ -57,7 +57,7 @@ var APARATOS={"lavadora":{"id":"lavadora","nombre":"Lavadora","art":"una lavador
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') modal.classList.remove('on'); });
     var cp = $('[data-copiar]', modal);
     if (cp) cp.addEventListener('click', function () {
-      if (navigator.clipboard) navigator.clipboard.writeText('883861141').then(function () { cp.textContent = 'Copiado: 883 861 141'; });
+      if (navigator.clipboard) navigator.clipboard.writeText('641153922').then(function () { cp.textContent = 'Copiado: 641 153 922'; });
     });
   }
 
