@@ -1,10 +1,10 @@
-/* Reparación Bosch Valladolid — "A la vista" · editorial técnica cálida */
+/* Reparación Bosch Valladolid — "A la vista" · editorial técnica cálida (plantilla común; los colores de marca vienen de datos-marca.json) */
 @font-face{font-family:"Bricolage";src:url("../fonts/bricolage-grotesque.woff2") format("woff2");font-weight:500 800;font-display:swap}
 @font-face{font-family:"Instrument";src:url("../fonts/instrument-sans.woff2") format("woff2");font-weight:400 700;font-display:swap}
 @font-face{font-family:"Plex";src:url("../fonts/ibm-plex-mono-500.woff2") format("woff2");font-weight:500;font-display:swap}
 
 :root{
-  --tinta:#0F1E2E;--crema:#F4EFE6;--salvia:#6E8B74;--rojo:#D0021B;--rojo-t:#B50218;--rojo-l:#FF4D5E;--rojo-2:#FBE0E3;--ambar:#D9822B;--wa:#1FA855;--gris:#C9C2B4;
+  --tinta:#0F1E2E;--crema:#F4EFE6;--salvia:#6E8B74;--rojo:#D0021B;--rojo-t:#B50218;--rojo-l:#FF4D5E;--rojo-2:#FBE0E3;--rojo-h:#B50218;--ambar:#D9822B;--wa:#1FA855;--gris:#C9C2B4;
   --tinta-2:#1B2D40;--salvia-t:#4F6B55;--crema-2:#EBE4D6;--salvia-2:#E3EBE4;--ambar-2:#F6E3CF;
   --fd:"Bricolage","Instrument",system-ui,sans-serif;--fb:"Instrument",system-ui,-apple-system,"Segoe UI",sans-serif;--fm:"Plex",ui-monospace,Menlo,Consolas,monospace;
   --ease:cubic-bezier(.23,1,.32,1);--r:14px;--r2:10px;--pad:20px;--maxw:1120px;--hdr:56px;
@@ -47,14 +47,14 @@ p{margin:0 0 1em}
 .hdr-tel{display:inline-flex;align-items:center;gap:8px;color:var(--rojo-l);text-decoration:none;font:600 15px var(--fb);min-height:44px;padding:0 6px}
 .hdr-tel svg{width:24px;height:24px}
 .hdr-tel span{display:none}
-@media(min-width:900px){.nav{display:flex}.hdr-tel span{display:inline}.hdr-tel{background:var(--rojo);color:#fff;border-radius:999px;padding:0 14px;min-height:40px}.hdr-tel:hover{background:var(--rojo-t)}}
+@media(min-width:900px){.nav{display:flex}.hdr-tel span{display:inline}.hdr-tel{background:var(--rojo);color:#fff;border-radius:999px;padding:0 14px;min-height:40px}.hdr-tel:hover{background:var(--rojo-h)}}
 
 /* ---------- botones y chips */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;min-height:54px;padding:12px 22px;border-radius:12px;border:0;font:600 17px/1.2 var(--fb);text-decoration:none;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s;width:100%}
 .btn:active{transform:translateY(1px)}
 .btn svg{width:22px;height:22px;flex:none}
 .btn-amber{background:var(--rojo);color:#fff}
-.btn-amber:hover{background:var(--rojo-t);box-shadow:0 8px 22px -10px rgba(208,2,27,.7)}
+.btn-amber:hover{background:var(--rojo-h);box-shadow:0 8px 22px -10px rgba(208,2,27,.7)}
 .btn-wa{background:var(--wa);color:#fff}
 .btn-wa:hover{background:#22B75D;box-shadow:0 8px 22px -10px rgba(31,168,85,.7)}
 .btn-ghost{background:transparent;color:var(--tinta);border:1.5px solid var(--tinta)}
@@ -212,7 +212,7 @@ details .in{padding:0 0 16px;color:#3A4A5A}
 .sint-p a{display:inline-flex;margin-top:8px}
 @media(min-width:720px){.sint{grid-template-columns:1fr 1fr}.sint>div{display:contents}.sint .sint-p{grid-column:1/-1}}
 
-/* E-Nr */
+/* localizador de la etiqueta de modelo del aparato */
 .enr{display:grid;gap:20px;align-items:center}
 .enr svg{width:100%;max-width:280px;height:auto;margin:0 auto}
 @media(min-width:720px){.enr{grid-template-columns:280px 1fr}}
